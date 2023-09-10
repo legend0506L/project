@@ -1,0 +1,26 @@
+<html>
+<body>
+    <form action="slip-5.php" method="post">
+        <h1 style="text-align:center">enter a details of the items</h1>
+        enter a items-code<input type="text" name="items-code"><br>
+        enter a items-name<input type="text" name="items-name"><br>
+        enter a units-sold<input type="text" name="units-sold"><br>
+        enter a rate<input type="text" name="rate"><br>
+        <input type="submit" value="submit">
+</form>
+</body>
+</html>
+<?php
+echo "slip no 5<br>";
+$itemscode=$_POST['items-code'];
+$itemsname=$_POST['items-name'];
+$sold=$_POST['units-sold'];
+$rate=$_POST['rate'];
+$tamt=$sold*$rate;
+echo" <table border=1>";
+echo"<tr><th>itemscode</th><th>itemsname</th><th>unit</th><th>rate</th></tr>";
+echo "<tr><td>$itemscode</td><td>$itemsname</td><td>$sold</td><td>$rate</td></tr>";
+echo "<tr><th colspan=4></th></tr>";
+echo "<tr><td colspan=3>total amount</th><td>$tamt</td></tr></table>";
+?>
+

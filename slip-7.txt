@@ -1,0 +1,37 @@
+<html>
+<body>
+    <form action="slip-9.php" method="get">
+        enter a radius<input type="text" name="r"><br>
+        enter a height<input type="text" name="h"><br>
+
+        <input type="submit" value="submit">
+</form>
+</body>
+</html>
+
+<?php 
+$r=$_GET['r'];
+$h=$_GET['h'];
+define('PI','3.14');
+interface cal{
+    function area1($r,$h);
+    function volume1($r,$h);
+}
+
+class cylinder implements cal{
+ function area1($r,$h){
+      $area=2*PI*$r*($r+$h);
+      echo "<h3>the area  of the  cylinder is :$area</h3><br>";
+ }
+ function volume1($r, $h)
+ {
+    $vol=PI*$r*$r*$h;
+    echo "<h3>the volume  of the  cylinder is :$vol</h3><br>";
+ }
+}
+
+$c=new cylinder;
+$c->area1($r,$h);
+$c->volume1($r,$h);
+
+?>

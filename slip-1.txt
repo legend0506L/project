@@ -1,0 +1,59 @@
+<html>
+<body>
+    <form action="slip-1.php" method="post">
+        enter a strings<input type="text" name="str"><br>
+        select the options
+        <input type="radio" name="ch" value="1">vowels
+        <input type="radio" name="ch" value="2">palindrome<br>
+        <input type="submit" value="submit">
+</form>
+</body>
+</html>
+
+<?php
+echo "slip-1<br>";
+$str=$_POST['str'];
+$ch=$_POST['ch'];
+$cnt=0;
+$vowels=array("a"=>0,"e"=>0,"i"=>0,"o"=>0,"u"=>0);
+if($ch==1){
+for($z=0;$z<strlen($str);$z++){
+    if($str[$z]=='a'){
+        ++$cnt;
+        ++$vowels['a'];
+    }
+    else if($str[$z]=='e'){
+        ++$cnt;
+        ++$vowels['e'];
+    }
+    else if($str[$z]=='i'){
+        ++$cnt;
+        ++$vowels['i'];
+    }
+    else if($str[$z]=='o'){
+        ++$cnt;
+        ++$vowels['o'];
+    }
+    else if($str[$z]=='u'){
+        ++$cnt;
+        ++$vowels['u'];
+    }}
+    echo "total no of vowels is: $cnt<br>";
+    echo "count 'a':".$vowels['a']."<br>";
+    echo "count 'e':".$vowels['e']."<br>";
+    echo "count 'i':".$vowels['i']."<br>";
+    echo "count 'o':".$vowels['o']."<br>";
+    echo "count 'u':".$vowels['u']."<br>";
+}
+    
+else if($ch==2){
+    $rstr=strrev($str);
+    if($rstr==$str){
+        echo "string is palindrome";}
+    else{
+        echo "string is not  palindrome";
+    }
+}
+
+
+?>

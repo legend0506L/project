@@ -1,0 +1,63 @@
+<html>
+<body>
+    <form action="slip-8.php" method="post">
+        select the options<br>
+        <input type="radio" name="ch" value="1">SORT ARRAY IN AS AND DES<br>
+        <input type="radio" name="ch" value="2">SORT ARRAY without values IN AS AND DES<<br>
+        <input type="radio" name="ch" value="3">filter odd element<br>
+        <input type="radio" name="ch" value="4">sort different array at gglance using single funtion<br>
+        <input type="radio" name="ch" value="5">merge two array<br>
+        <input type="radio" name="ch" value="5">find intersection of two array<br>
+        <input type="radio" name="ch" value="5">find union of two array<br>
+        <input type="radio" name="ch" value="5">find set diernce of two array<br>
+        <input type="submit" value="submit">
+</form>
+</body>
+</html>
+
+<?php
+echo "slip-1<br>";
+$ch=$_POST['ch'];
+$array1=array('a'=>1,'b'=>2,'c'=>3,'d'=>4,'e'=>5,);
+$array2=array('i'=>11,'m'=>12,'n'=>13,'o'=>14,'q'=>15,);
+$array3=array('a'=>10,'b'=>20,'c'=>30,'d'=>40,'e'=>50,);
+function is_odd($var){
+    if($var%2==1){
+        return $var;
+    }
+}
+switch($ch){
+    case 1:sort($array1);
+           echo "array in ascending order<br>";
+           print_r($array1);
+           rsort($array1);
+           echo "<br>desending order:<br>";
+           print_r($array1);
+           break;
+    case 2:asort($array1);
+           echo "array in ascending order<br>";
+           print_r($array1);
+           arsort($array1);
+           echo "<br>desending order:<br>";
+           print_r($array1);
+           break;
+    case 3:print_r(array_filter($array1,'is_odd'));
+           break;
+    case 4: array_multisort($array1,0,$array2,1,$array3,0);
+           print_r($array1);
+           echo "<br>";
+           print_r($array2);
+           echo "<br>";
+           print_r($array3);
+           echo "<br>";
+           break;
+    case 5: print_r(array_merge($array1,$array2));
+           break;
+    case 6:print_r(array_intersect($array1,$array2));
+           break;
+    case 7:$union=array_merge($array1,$array2);
+            print_r(array_unique($union));break;
+    case 8:print_r(array_diff($array1,$array2));break;
+    
+}
+?>

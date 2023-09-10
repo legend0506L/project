@@ -1,0 +1,31 @@
+<html>
+<body>
+    <form action="slip-7.php" method="post">
+        select the options<br>
+        <input type="radio" name="ch" value="1">display<br>
+        <input type="radio" name="ch" value="2">size<br>
+        <input type="radio" name="ch" value="3">delete<br>
+        <input type="radio" name="ch" value="4">reverse<br>
+        <input type="radio" name="ch" value="5">traverse<br>
+        <input type="submit" value="submit">
+</form>
+</body>
+</html>
+
+<?php
+echo "slip-1<br>";
+$ch=$_POST['ch'];
+$array=array('zero'=>0,'one'=>1,'two'=>2,'three'=>3,'four'=>4,);
+switch($ch){
+    case 1:foreach($array as $key=>$value){
+           echo "key $key value $value<br>"; } break;
+    case 2: echo sizeof($array)."<br>"; break;
+    case 3: $len=sizeof($array)-1;
+        array_splice($array,$len);
+        print_r($array)."<br>"; break;
+    case 4:print_r(array_flip($array))."<br>"; break;
+    case 5:shuffle($array);
+           print_r($array)."<br>"; break;
+}
+
+?>

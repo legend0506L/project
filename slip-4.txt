@@ -1,0 +1,41 @@
+<html>
+<body>
+    <form action="slip-6.php" method="post">
+        enter a first no<input type="text" name="str1"><br>
+        enter a second no<input type="text" name="str2"><br>
+        enter a position <input type="text" name="pos"><br>
+        select the options<br>
+        <input type="radio" name="ch" value="1">compare <br>
+        <input type="radio" name="ch" value="2">with datatype<br>
+        <input type="radio" name="ch" value="3">append<br>
+        <input type="radio" name="ch" value="4">position  for reverse<br>
+        <input type="submit" value="submit">
+</form>
+</body>
+</html>
+
+<?php
+echo "slip-6<br>";
+$str1=$_POST['str1'];
+$str2=$_POST['str2'];
+$pos=$_POST['pos'];
+$ch=$_POST['ch'];
+switch($ch){
+    case 1: if($str1==$str2)
+        echo "both str are equal<br>";
+          else 
+          echo "both str not are equal<br>";
+
+    case 2: if($str1===$str2)
+          echo "both str are exat equal<br>";
+            else 
+            echo "both str not are exat equal<br>";
+
+    case 3:echo $str1.$str2;
+
+    case 4: $len=strlen($str1)-$pos;
+            $s=substr($str1,$pos,$len);
+            $str4=strrev($s);
+            echo "<br>after reverse $str4<br>";
+}
+?>
