@@ -1,0 +1,3 @@
+x=c(10 ,20,30,40,50)
+print(paste("max no",max(x)))
+print(paste("min no",min(x)))
