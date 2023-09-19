@@ -1,0 +1,3 @@
+x=c(10,30,20,60,40)
+print(paste(sort(x)));
+print(paste(sort(x,decreasing=TRUE)))
