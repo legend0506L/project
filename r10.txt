@@ -1,0 +1,7 @@
+l=list("city1","city2","city3")
+names(l)=c("f","s","t")
+add=c("pune")
+ans=append(l,add)
+del=head(ans,-1)
+del[3]="mumbai"
+print(del)

@@ -1,0 +1,5 @@
+v=c("a","b","c")
+f=factor(v)
+print(f)
+levels(f)[1]="d"
+print(f)

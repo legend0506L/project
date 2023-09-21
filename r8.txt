@@ -1,0 +1,8 @@
+a=c(10,30,30)
+b=c(40,60,60)
+ab=data.frame(a,b)
+print(ab)
+print("duplicate")
+print(duplicated(ab))
+print("unique")
+print(unique(ab))

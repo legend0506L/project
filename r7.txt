@@ -1,0 +1,4 @@
+emp=data.frame(name=c("a","b","c","d"),
+              gender=c("m","m","f","f"),
+            des=c("ceo","manager","assist","worker"))
+print(emp)
