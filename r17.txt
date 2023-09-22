@@ -1,9 +1,0 @@
-ctb=function(n){
-    if(n>1){
-        ctb(as.integer(n/2))
-    }
-    cat(n%%2)
-}
-d=7.80
-print(d)
-b=ctb(d)
