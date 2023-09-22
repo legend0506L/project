@@ -1,0 +1,5 @@
+f1=factor(c("a","b","c"))
+f2=factor(c("x","y","z"))
+f11=factor(c(levels(f1),levels(f2)))
+print(rev(f11))
+          
