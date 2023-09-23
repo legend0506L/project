@@ -1,0 +1,5 @@
+plot(1,main="this is empt",
+      xlab="",
+     ylab="",
+     xlim=c(0,20),
+     ylim=c(0,50))
