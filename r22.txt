@@ -1,0 +1,4 @@
+for(i in 1:100){print(i)}
+for(i in 1:3){ print("SY")}
+for(i in 1:5){ print("BBA")}
+for(i in 1:5){print("SYBBA")}
