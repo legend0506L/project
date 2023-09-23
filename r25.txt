@@ -1,0 +1,5 @@
+l=list(c(1,2,3,4),
+      month.abb,
+      matrix(c(3,4,1,2),nrow=2),
+       asin )
+print(l)

@@ -1,0 +1,14 @@
+v1=c(1,2,3)
+v2=c(4,5,6,7)
+arr=array(c(v1,v2),dim=c(4,2))
+mat=arr[]
+print(mat)    
+
+v11=c(1,2,3)
+v21=c(4,5,6,7)
+arr1=array(c(v11,v21),dim=c(4,2))
+mat1=arr1[]
+print(mat1)  
+
+m=mat*mat1
+print(m)
