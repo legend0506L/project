@@ -23,8 +23,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <style>
-        body{background: linear-gradient(90deg, rgba(2,0,36,1) -11%, rgba(107,9,176,1) 36%, rgba(0,212,255,1) 96%);
-        color: white;}
+        body {
+            background: linear-gradient(90deg, rgba(2, 0, 36, 1) -11%, rgba(107, 9, 176, 1) 36%, rgba(0, 212, 255, 1) 96%);
+            color: white;
+        }
+
         .navbar {
             padding: 8px 90px 8px 35px;
         }
@@ -40,7 +43,8 @@
             transition: all 1s;
         }
 
-        .h-text {position: relative;
+        .h-text {
+            position: relative;
             top: -18px;
             color: red;
             font-size: 40px;
@@ -170,7 +174,7 @@
 
         .sl:hover {
             font-size: 3.5rem;
-            color: rgb(218, 54, 48) ;
+            color: rgb(218, 54, 48);
             transition: all 1s;
         }
 
@@ -203,20 +207,47 @@
             width: 450px;
             height: 600px;
         }
-        .nav-alert{
+
+        .nav-alert {
             background-color: rgb(144 76 193 / 48%);
             color: rgb(0, 254, 199);
         }
-        .php{
+
+        .php {
             color: black;
             text-decoration: none;
         }
-        .video{width: 100px;}
-        .c{background-color:black !important;}
-        .i{color: white !important}
-        .text-md-start{
+
+        .video {
+            width: 100px;
+        }
+
+        .c {
+            background-color: black !important;
+        }
+
+        .i {
+            color: white !important
+        }
+
+        .text-md-start {
             color: white !important;
         }
+
+        .v2 {
+            margin-left: 56px;
+            height: 98px;
+            width: 417px;
+        }
+        .orgin:hover{color: rgb(5, 255, 222)!important;
+            font-size: 1.4rem;
+            
+            transition: all 1s;}
+
+        .img11 {
+            width: 190px;
+        }
+        #imgplus .clicked { display: none;  }
     </style>
 
 </head>
@@ -231,19 +262,20 @@
                 </video>
                 <span class="h-text" class="i">𝖎𝖙𝖆𝖈𝖍𝖎</span>
             </a>
-
+            <img id="img11"   id="imgplus"/>
+            <video src="obtio.mp4" width="700px" autoplay loop muted class="v2" id="vi2"></video>
             <ul class="nav justify-content-end">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" class="v1" onclick="myFunction()">Active</a>
+                    <a class="nav-link active" aria-current="page" class="v1" id="v2">obito</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" id="v3">madara</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" id="v4">sasuke</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link ">Disabled</a>
+                    <a class="nav-link" id="v5" >active</a>
                 </li>
             </ul>
         </div>
@@ -267,11 +299,11 @@
             </p>
 
             <div class="text-center text-md-start">
-                <a href="overview.html" class="btn btn-primary shadow lift me-1 btn-1">
+                <a href="#slip" class="btn btn-primary shadow lift me-1 btn-1">
                     View all pages <i class="fe fe-arrow-right d-none d-md-inline ms-3"></i>
                 </a>
-                <a href="docs/index.html" class="btn btn-primary-soft lift">
-                    Documentation
+                <a href="re.html" class="btn btn-primary-soft lift orgin"  style="color: white;">
+                    orgin
                 </a>
             </div>
         </div>
@@ -309,7 +341,7 @@
     </div>
     <div class="white-space"></div>
     <hr class="hr"><br><br><br>
-    <div class="slip">
+    <div class="slip" id="slip">
         <div class="line">|</div>
         <div class="line1">|</div>
         <div class="sl"><a href="r-prog.html" class="php">R-PROG</a></div>
@@ -317,26 +349,54 @@
         <div class="sl-2">NODE-JS</div>
         <div class="sl-3">MONGO-DB</div>
     </div>
+
+
+    <script>
+        /*let password=parseInt(prompt("ENTER A PASSWORD"));
+         while(!password){
+             password=parseInt(prompt("ENTER A vaild PASSWORD ! try again"));
+         }
+         if(password!='0506'){
+             var gfg = document.getElementById("body");
+                 gfg.style.display="none";
+         }*/
+
+        var active1 = document.getElementById('v2');
+        var active2 = document.getElementById('vi2');
+        var active3 = document.getElementById('img11');
+        var v5=document.getElementById('v5');
+
+        active1.addEventListener("click", () => {
+            active2.setAttribute("src", "obtio.mp4");
+        })
+        document.getElementById('v3').addEventListener("click", () => {
+            active2.setAttribute("src", "madara.mp4");
+        })
+        document.getElementById('v4').addEventListener("click", () => {
+            active2.setAttribute("src", "sasuke.mp4");
+        })
+        document.getElementById('v5').addEventListener("click", () => {
+            //active3.setAttribute("src", "uchiha1.webp");
+           
+        var img = document.getElementById('img11').src;
+        if (img) {
+                active3.src = '';
+                v5.innerHTML="active";
+
+            } else if (!img) {
+                active3.src = 'uchiha1.webp';
+                active3.style = "width:190px";
+                v5.innerHTML="deactive";
+            }
+        })
+
+
+
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-        crossorigin="anonymous"></script>
-
-
-<script>
-   /* let password=parseInt(prompt("ENTER A PASSWORD"));
-    while(!password){
-        password=parseInt(prompt("ENTER A vaild PASSWORD ! try again"));
-    }
-    if(password!='0506'){
-        var gfg = document.getElementById("body");
-            gfg.style.display="none";
-        
-    }*/
-    function myFunction(){
-    var imgsrc="obtio.mp4";
-    document.querySelectorAll("source").setAttribute("src", imgsrc);
-    }
-
-</script>
+        crossorigin="anonymous">
+    </script>
 </body>
+
 </html>

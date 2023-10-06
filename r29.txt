@@ -1,0 +1,10 @@
+l=list("s1","st2","st3")
+names(l)=c("s1","s2","s3")
+print(l)
+add=c("st4")
+ll=append(l,add)
+print(ll)
+ll[2]="student2"
+print(ll)
+ll[1]=NULL
+print(ll)
