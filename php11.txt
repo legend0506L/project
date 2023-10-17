@@ -1,0 +1,50 @@
+<html>
+<body>
+    <form action="slip-11.php" method="post">
+rec 
+<input type="text" name="a" placeholder="length">
+<input type="text" name="b" placeholder="breath"><br>
+square<input type="text" name="c" placeholder="side"><br>
+circle<input type="text" name="d" placeholder="radius">
+<input type="submit" value="submit">
+</form>
+</body>
+</html>
+
+<?php
+$a=$_POST['d'];
+$b=$_POST['c'];
+$c=$_POST['a'];
+$d=$_POST['b'];
+
+interface one{
+   function area($c,$d);
+}
+
+class rec implements one{
+    function area($c,$d){
+        $area=$c*$d;
+        echo "rec is:".$area;
+    }
+}
+class square  extends rec{
+    function area($b,$c){
+        $area=$b*$c;
+        echo "square is:".$area;
+    }
+} 
+class circle{
+    function area($a){
+        $area=0.5*$a*$a;
+        echo "circle is:".$area;
+    }
+}
+$c=new rec();
+$o=new square();
+$s=new circle();
+$c->area($c,$d);
+$o->area($b,$b);
+$s->area($a);
+
+
+?>
