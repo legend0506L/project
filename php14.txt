@@ -1,0 +1,19 @@
+<html>
+<body>
+    <form action="s14.php" method="post">
+        email<input type="email"  name="e">
+        <input type="submit" value="submit">
+</form>
+</body>
+</html>
+<?php
+$e=$_POST['e'];
+$re='/^[_a-z0-9-]+(\.[a-z0-9-]+)*@[a-z0-9]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/';
+if(preg_match($re,$e)){
+    echo 'vaild email';
+}
+else{
+    echo "invaild email";
+}
+
+?>
