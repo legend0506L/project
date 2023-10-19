@@ -1,0 +1,97 @@
+<html>
+<body>
+    <form action="s15.php" method="post">
+    select the options<br><br>
+    <input type="checkbox" name="a" value="1">fruits
+    <input type="checkbox" name="a" value="2">veg
+<br><hr>
+
+<span class="f">
+<span>select you fav fruits:</span>
+<select name="fs">
+    <option value="pineapple" name="fs">pineapple</option>
+    <option value="apple" name="fs">apple</option>
+    <option value="orange" name="fs">orange</option>
+    <option value="banana" name="fs">banana</option>
+</select>
+</span>
+<br><hr>
+<span class="v">
+<span>select you fav veg:</span>
+<select name="v">
+    <option value="photo" name="v">photo</option>
+    <option value="onion" name="v">onion</option>
+    <option value="ladyfinger" name="v">ladyfinger</option>
+    <option value="tomoto" name="v">tomoto</option>
+</select>
+</span>
+<hr><br>
+
+select your quanilty
+<input type="radio" name="q" value="1">1kg
+<input type="radio" name="q" value="2">2kg
+<input type="radio" name="q" value="3">3kg
+
+<hr>
+<br>
+    <input type="submit" value="submit">
+</form>
+</body>
+</html>
+<?php
+$f=$_POST['a'];
+$fs=$_POST['fs'];
+$v=$_POST['v'];
+$q=$_POST['q'];
+$tp;
+if($f==1){
+  if("pineapple"==$fs){
+    if($q=="1"){$tp=50;}
+    else if($q=="2"){$tp=100;}
+    else{$tp=150;}
+
+}
+  else if("apple"==$fs){
+    if($q=="1"){$tp=30;}
+    else if($q=="2"){$tp=60;}
+    else{$tp=90;}
+  }
+  else if("orange"==$fs){
+    if($q=="1"){$tp=40;}
+    else if($q=="2"){$tp=80;}
+    else{$tp=120;}
+  }
+  else if("banana"==$fs){
+    if($q=="1"){$tp=30;}
+    else if($q=="2"){$tp=60;}
+    else{$tp=90;}
+  }
+}
+
+else if($f==2){
+    if("photo"==$v){
+        if($q=="1"){$tp=30;}
+    else if($q=="2"){$tp=60;}
+    else{$tp=90;}
+    }
+    else if("onion"==$v){
+        if($q=="1"){$tp=40;}
+    else if($q=="2"){$tp=80;}
+    else{$tp=120;}
+    }
+    else if("ladyfinger"==$v){
+        if($q=="1"){$tp=20;}
+        else if($q=="2"){$tp=40;}
+        else{$tp=60;}
+    }
+    else if("tomoto"==$v){
+        if($q=="1"){$tp=40;}
+    else if($q=="2"){$tp=80;}
+    else{$tp=120;}
+    }
+}
+echo $f;
+echo $fs;
+echo $v;
+echo $q;
+echo $tp;
