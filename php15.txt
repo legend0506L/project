@@ -1,3 +1,4 @@
+//note that bill is not created "soon it will update" 
 <html>
 <body>
     <form action="s15.php" method="post">
