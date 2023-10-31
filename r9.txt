@@ -1,5 +1,5 @@
-v=c("a","b","c")
-f=factor(v)
+f=factor(c(1,2,3))
 print(f)
-levels(f)[1]="d"
+v=factor(c(5))
+levels(f)[1]=levels(v)[1]
 print(f)
