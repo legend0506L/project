@@ -1,0 +1,32 @@
+<html>
+    <body>
+        <form action="t1.php" method="post">
+            str1<input type="text" name="s1">
+            str2<input type="text" name="s2">
+            <input type="text" name="s3"><br>
+            <input type="radio" name="c" value="1">s occ
+            <input type="radio" name="c" value="2">split
+            <input type="radio" name="c" value="3">replace
+            <input type="submit">
+        </form>
+    </body>
+</html>
+<?php 
+$s1=$_POST['s1'];
+$s2=$_POST['s2'];
+$s3=$_POST['s3'];
+$c=$_POST['c'];
+switch($c){
+    case 1:$s=strpos($s1,$s2);
+    if($s!=0){
+     echo "s2 '$s2' is not present at s1'$s1'";
+    }
+    else{
+     echo "s2 '$s2' is  present at time of'$s' s1'$s1'";
+    }
+    case 2:$t=preg_split("//",$s1);
+    foreach($t as $y){echo "\t$y<br>";}
+    case 3:$r=str_replace($s2,$s3,$s1);
+           echo $r;
+}
+?>
