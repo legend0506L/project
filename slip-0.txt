@@ -1,0 +1,36 @@
+<html>
+    <body>
+        <form action="t1.php" method="post">
+            str1<input type="text" name="s1">
+            str2<input type="text" name="s2">
+            <input type="text" name="s3"><br>
+            <input type="radio" name="c" value="1">f and l
+            <input type="radio" name="c" value="2">t occ
+            <input type="radio" name="c" value="3">replace
+            <input type="submit">
+        </form>
+    </body>
+</html>
+<?php 
+$s1=$_POST['s1'];
+$s2=$_POST['s2'];
+$s3=$_POST['s3'];
+$c=$_POST['c'];
+
+switch($c){
+    case 1:echo "first occ ";echo strpos($s1,$s2);
+           echo "last occ ";echo strrpos($s1,$s2);break;
+    case 2:echo "totall occ ".substr_count($s1,$s2);break;
+    case 3:echo "string is replace ".substr_replace($s1,$s3,2,3);
+        
+}
+
+?>
+
+
+
+
+
+
+
+
