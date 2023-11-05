@@ -1,0 +1,38 @@
+//html file
+<html>
+    <form action="s18.php" method="post">
+        username<input type="text" name="name">
+        password<input type="text" >
+        <input type="submit" value="submit">
+    </form>
+</html>
+
+
+//php file
+<?php
+$auth_yes=0;
+session_start();
+#tm=time();
+?>
+    <form action="new.php" method="post">
+        roll no<input type="text" name="rno">
+        name<input type="text" name="name">
+        city<input type="text" name="city">
+        <input type="submit" value="submit">
+    </form>
+
+// new php file
+<?php
+$a=$_POST['rno'];
+$b=$_POST['name'];
+$c=$_POST['city'];
+session_start();
+$new=time()+60;
+if($new>time()){
+    echo "time out ";
+}
+else{echo time();
+    echo "roll no:".$a."<br>";
+    echo "name no:".$b."<br>";
+    echo "city:".$c."<br>";
+}

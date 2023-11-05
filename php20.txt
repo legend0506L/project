@@ -1,0 +1,32 @@
+//html file 
+<html>
+    <body>
+        <form action="t20.php" method="POST">
+          style  <input type="text" name="t1">
+          size <input type="text" name="t2">
+        color <input type="text" name="t3">
+            bgcolor<input type="text" name="t4">
+            <input type="submit" value="submit">
+        </form>
+        </body>
+        </html>
+
+// t20 php file
+<?php         
+    setcookie("s1",$_POST['t1'],time()+3600);
+    setcookie("s2",$_POST['t2'],time()+3600);
+    setcookie("s3",$_POST['t3'],time()+3600);
+    setcookie("s4",$_POST['t4'],time()+3600);
+    echo "<a href='ti20.php'>show</a>";
+?>
+
+//ti20.php file
+<?php
+$style=$_COOKIE['s1'];
+$size=$_COOKIE['s2'];
+$color=$_COOKIE['s3'];
+$bgcolor=$_COOKIE['s4'];
+$m="this is color";
+echo "<body bgcolor=$bgcolor>";
+echo "<font color=$color size=$size face=$style>$m</font";
+?>
