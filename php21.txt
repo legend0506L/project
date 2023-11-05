@@ -1,0 +1,60 @@
+//html file
+<html>
+    <body>
+        <form action="t2.php" method="post">
+            name<input type="text" name="s1">
+            class<input type="text" name="s2">
+            address<input type="text" name="s3">
+            <input type="submit">
+        </form>
+    </body>
+</html>
+
+//t2 php file
+<?php
+$s1=$_POST['s1'];
+$s2=$_POST['s2'];
+$s3=$_POST['s3'];
+echo "<html><style>.h{display:none;}</style><body><form action='t1.php' method='post'>enter a marks";
+echo "phy<input type='text' name='m1'><br>";
+echo "bio<input type='text' name='m2'><br>";
+echo "chem<input type='text' name='m3'><br>";
+echo "math<input type='text' name='m4'><br>";
+echo "marathi<input type='text' name='m5'<br>'>";
+echo "eng<input type='text' name='m6'><br>";
+echo "<p class='h'><input type='text' name='s1' value='$s1'></p>";
+echo "<p class='h'><input type='text' name='s2' value='$s2'></p>";
+echo "<p class='h'><input type='text' name='s3' value='$s3'></p>";
+echo "<input type='submit'></form></body></html>";
+?>
+
+//t1.php file
+<?php
+$s1=$_POST['s1'];
+$s2=$_POST['s2'];
+$s3=$_POST['s3'];
+$m1=$_POST['m1'];
+$m2=$_POST['m2'];
+$m3=$_POST['m3'];
+$m4=$_POST['m4'];
+$m5=$_POST['m5'];
+$m6=$_POST['m6'];
+if(isset($s1,$s2,$s3)){
+   
+    echo "$s1<br>";
+    echo "$s2<br>";
+    echo "$s3<br>";
+    echo "--marks --";
+    echo "$m1<br>";
+    echo "$m2<br>";
+    echo "$m3<br>";
+    echo "$m4<br>";
+    echo "$m5<br>";
+    echo "$m6<br>";
+    $t=$m1+$m2+$m3+$m4+$m5+$m6;
+    $per=($t/600)*100;
+    echo "total :$t";
+    echo "per:".$per;
+}
+?>
+
