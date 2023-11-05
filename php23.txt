@@ -1,0 +1,47 @@
+//html file
+<html>
+    <body>
+        <form action="t23.php" method="post">
+            name<input type="text" name="s1">
+            address<input type="text" name="s2">
+            phone no<input type="text" name="s3">
+            <input type="submit">
+        </form>
+    </body>
+</html>
+
+//t23.php file
+<?php
+$s1=$_POST['s1'];
+$s2=$_POST['s2'];
+$s3=$_POST['s3'];
+echo "<html><style>.h{display:none;}</style><body><form action='ti23.php' method='post'>product info";
+echo "product name<input type='text' name='m1'><br>";
+echo "qty<input type='text' name='m2'><br>";
+echo "rate<input type='text' name='m3'><br>";
+echo "<p class='h'><input type='text' name='s1' value='$s1'></p>";
+echo "<p class='h'><input type='text' name='s2' value='$s2'></p>";
+echo "<p class='h'><input type='text' name='s3' value='$s3'></p>";
+echo "<input type='submit'></form></body></html>";
+?>
+
+//ti23.php file
+<?php
+$s1=$_POST['s1'];
+$s2=$_POST['s2'];
+$s3=$_POST['s3'];
+$m1=$_POST['m1'];
+$m2=$_POST['m2'];
+$m3=$_POST['m3'];
+if(isset($s1,$s2,$s3)){
+    echo "name :$s1<br>";
+    echo "address :$s2<br>";
+    echo "phone no: $s3<br>";
+    echo "--products details --<br>";
+    echo "products name$m1<br>";
+    echo " qty:$m2<br>";
+    echo "rate:$m3<br>";
+    $t=$m2*$m3;
+    echo "total :$t";
+}
+?>
