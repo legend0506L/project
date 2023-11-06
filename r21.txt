@@ -1,10 +1,10 @@
-data(PlantGrowth)
-dataset<-PlantGrowth
+
 library(caret)
-x=dataset[,1:1]
-y=dataset[,2]
 library(dplyr)
 library(ggplot2)
-dataset%>%ggplot(aes(x=y))+geom_bar()+labs(x="iris Flower species")
+data(PlantGrowth)
+dataset<-PlantGrowth
+x=dataset[,1:1]
+y=dataset[,2]
 scales=list(x=list(relation="free"),y=list(relation="free"))
 featurePlot(x=x,y=y,plot="density",scales=scales)
