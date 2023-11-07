@@ -1,0 +1,59 @@
+//html file
+<html>
+    <body>
+        <form action="t29.php" method="post">
+            <input type="radio" name="c" value="1">enter actor name and display movie name
+          <input type="text" name="s1"><br>
+            <input type="radio" name="c" value="2">insert movie info<br>
+            movie no<input type="text" name="m1"><br>
+            movie name<input type="text" name="m2"><br>
+            movie ryear<input type="text" name="m3"><br>
+            <input type="radio" name="c" value="3">update ryear <br>
+            movie name<input type="text" name="s2" ><br>
+            enter ryear<input type="text" name="s3" ><br>
+            <input type="submit">
+        </form>
+    </body>
+</html>
+
+//t29.php file
+<?php
+$in=$_POST['s1'];
+$in1=$_POST['s2'];
+$in2=$_POST['s3'];
+$c=$_POST['c'];
+
+$m1=$_POST['m1'];
+$m2=$_POST['m2'];
+$m3=$_POST['m3'];
+
+$con=mysqli_connect("localhost","root","","r29");
+if(!$con){
+    die("error!!!");
+}else{echo "<br>connection was succesfull<br>";}
+
+$tt=substr($in,1);
+
+$sql="SELECT * FROM `movie` where mno='$tt'";
+$result=mysqli_query($con,$sql);
+$row=mysqli_fetch_array($result);
+
+$sql1="SELECT * FROM `actor` where aname='$in'";
+$result1=mysqli_query($con,$sql1);
+$col=mysqli_fetch_array($result1);
+
+switch($c){
+    case 1:if("$tt"==$row['mno'] && ($in==$col['aname'] && $col['ano']==$tt)){
+           echo "movie name: ".$row['mname']."<br>";}
+           else{echo "<br>fail to connect<br>";} break;
+    case 2:$sqll="INSERT INTO `movie` (`mno`, `mname`, `ryear`) VALUES ('$m1', '$m2', '$m3')";
+           $ans=mysqli_query($con,$sqll);
+           if(!$ans){
+            die("error!!!");
+        }else{echo "<br>connection was succesfull<br>";} break;
+    case 3:$sql3="UPDATE `movie` SET `ryear` = '$in2' WHERE `movie`.`mname` = '$in1'";
+         $ans=mysqli_query($con,$sql3);
+           if(!$ans){ die("error!!!"); }
+           else{echo "<br>connection was succesfull<br>";} break;
+}
+?>

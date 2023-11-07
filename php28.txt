@@ -1,0 +1,42 @@
+//html file 
+<html>
+    <body>
+        <form action="t28.php" method="post">
+            teacher name<input type="text" name="s1">
+            <input type="submit">
+        </form>
+    </body>
+</html>
+//t28.php file
+
+<?php
+$in=$_POST['s1'];
+$con=mysqli_connect("localhost","root","","r28");
+if(!$con){
+    die("error!!!");
+}else{echo "connection was succesfull<br>";}
+
+$tt=substr($in,1);
+echo $tt;
+
+
+$sql="SELECT * FROM `student` where srno='$tt'";
+$result=mysqli_query($con,$sql);
+$row=mysqli_fetch_array($result);
+
+$sql1="SELECT * FROM `teacher` where tname='$in'";
+$result1=mysqli_query($con,$sql1);
+$col=mysqli_fetch_array($result1);
+
+$sql2="SELECT * FROM `subject` where sno='$tt'";
+$result2=mysqli_query($con,$sql2);
+$mat=mysqli_fetch_array($result2);
+
+
+if("$tt"==$row['srno'] && ($in==$col['tname'] && $col['tno']==$tt)){
+    echo "sname: ".$row['sname']."<br>";
+    echo "subject: ".$mat['subject'];
+}
+else{
+    echo "fail to connect";
+}
