@@ -1,0 +1,42 @@
+//html file 
+<html>
+    <body>
+        <form action="t26.php" method="post">
+            eno<input type="text" name="s1">
+            <input type="submit">
+        </form>
+    </body>
+</html>
+
+//t26.php file
+
+<?php
+$in=$_POST['s1'];
+$con=mysqli_connect("localhost","root","","r26");
+if(!$con){
+    die("error!!!");
+}else{echo "connection was succesfull<br>";}
+
+$tt=substr($in,1);
+$t1="city".$tt;
+
+$sql="SELECT * FROM `doc` where city='$t1'";
+$result=mysqli_query($con,$sql);
+$row=mysqli_fetch_array($result);
+
+$sql1="SELECT * FROM `hos` where hname='$in'";
+$result1=mysqli_query($con,$sql1);
+$col=mysqli_fetch_array($result1);
+
+
+if("$t1"==$row['city'] && ($in==$col['hname'] && $col['hcity']==$t1)){
+    echo "dno: ".$row['dno']."<br>";
+    echo "dname: ".$row['dname']."<br>";
+    echo "address: ".$row['address']."<br>";
+    echo "city: ".$row['city']."<br>";
+    echo "area: ".$row['area']."<br>";
+
+}
+else{
+    echo "fail to connect";
+}

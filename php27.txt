@@ -1,0 +1,41 @@
+//html file
+<html>
+    <body>
+        <form action="t27.php" method="post">
+            pname<input type="text" name="s1">
+            <input type="submit">
+        </form>
+    </body>
+</html>
+
+//t27.php file
+
+<?php
+$in=$_POST['s1'];
+$con=mysqli_connect("localhost","root","","r27");
+if(!$con){
+    die("error!!!");
+}else{echo "connection was succesfull<br>";}
+
+$tt=substr($in,7);
+
+
+$sql="SELECT * FROM `emp` where eno='$tt'";
+$result=mysqli_query($con,$sql);
+$row=mysqli_fetch_array($result);
+
+$sql1="SELECT * FROM `project` where pname='$in'";
+$result1=mysqli_query($con,$sql1);
+$col=mysqli_fetch_array($result1);
+
+
+if("$tt"==$row['eno'] && ($in==$col['pname'] && $col['pno']==$tt)){
+    echo "eno: ".$row['eno']."<br>";
+    echo "ename: ".$row['ename']."<br>";
+    echo "qualification: ".$row['qualification']."<br>";
+    echo "jod: ".$row['jod']."<br>";
+
+}
+else{
+    echo "fail to connect";
+}

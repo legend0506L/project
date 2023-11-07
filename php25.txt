@@ -1,0 +1,41 @@
+//html file
+<html>
+    <body>
+        <form action="t25.php" method="post">
+            eno<input type="text" name="s1">
+            <input type="submit">
+        </form>
+    </body>
+</html>
+
+//t25.php file
+<?php
+$in=$_POST['s1'];
+$con=mysqli_connect("localhost","root","","r25");
+if(!$con){
+    die("error!!!");
+}else{echo "connection was succesfull<br>";}
+
+$sql="SELECT * FROM `php25` where eno=$in";
+$sql1="SELECT * FROM `salary` where empno='$in'";
+
+$result1=mysqli_query($con,$sql1);
+$result=mysqli_query($con,$sql);
+$row=mysqli_fetch_array($result);
+$col=mysqli_fetch_array($result1);
+if($in==$row['eno']){
+    echo "eno".$row['eno']."<br>";
+    echo "ename".$row['ename']."<br>";
+    echo "address".$row['address']."<br>";
+    echo "phoneno".$row['phoneno']."<br>";
+    echo "salary".$row['salary']."<br>";
+    echo "---salary details---<br>";
+    echo  "empno".$col['empno']."<br>";
+    echo  "basic".$col['basic']."<br>";
+    echo  "hr".$col['hr']."<br>";
+    echo  "ta".$col['ta']."<br>";
+    echo  "da".$col['da']."<br>";
+}
+else{
+    echo "fail to connect";
+}
