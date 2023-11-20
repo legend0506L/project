@@ -1,7 +1,5 @@
 data=data.frame(
-"items"=c(1,2,3),
-"jan"=c(12,13,14))
+"items"=c(1,2,3))
 data2=data.frame(
-"items"=c(1,2,4),
-"jan"=c(12,13,14))
+"items"=c(1,2,4))
 print(setdiff(data2,data))
