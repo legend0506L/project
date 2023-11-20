@@ -1,5 +1,4 @@
-m=matrix(1:10,nrow=2,ncol=2)
+m=matrix(1:4,nrow=2, ncol=2)
+unlist(as.list(m))
+unlist(as.list(sort(m,decreasing=TRUE)))
 print(m)
-l=split(m,rep(1:ncol(m),each=nrow(m)))
-print(l)
-print(sort(m))
