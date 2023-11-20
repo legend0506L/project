@@ -1,7 +1,5 @@
 
 library(caret)
-library(dplyr)
-library(ggplot2)
 data(PlantGrowth)
 dataset<-PlantGrowth
 x=dataset[,1:1]
