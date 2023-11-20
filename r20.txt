@@ -1,0 +1,3 @@
+airquality[1,4]
+colnames(airquality)
+with(airquality,plot(Wind~Temp))
