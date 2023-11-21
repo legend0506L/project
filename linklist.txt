@@ -1,0 +1,109 @@
+//s,d,sc,dc!
+#include <stdio.h>
+#include <stdlib.h>
+struct node{
+    struct node*pev;
+    int data;
+    struct node*next;
+};
+void print(struct node*head){
+    struct node*ptr=head;
+   do{
+        printf("element:%d\n",ptr->data);
+         ptr=ptr->next;
+    } while(ptr!=head);
+}
+
+struct node* insertatfirst(struct node *head,int data){
+    struct node *ptr=(struct node*)malloc(sizeof(struct node*));
+    ptr->data=data;
+    struct node *p=head;
+    while(p->next!=head){
+        p=p->next;
+    }
+    p->next=ptr;
+    ptr->next=head;
+    head=ptr;
+   
+    return head;
+}
+struct node* insertatindex(struct node *head,int data,int ind){
+    struct node *ptr=(struct node*)malloc(sizeof(struct node*));
+    ptr->data=data;
+    struct node *p=head;
+    int i=0;
+    while(i!=ind){
+        p=p->next;
+        i++;
+    }
+    ptr->next=p->next;
+    p->next=ptr;
+    return head;
+}
+struct node* insertatlast(struct node *head,int data){
+    struct node *ptr=(struct node*)malloc(sizeof(struct node*));
+    ptr->data=data;
+    struct node *p=head;
+   do{
+        p=p->next;
+    } while(p->next!=head);
+    p->next=ptr;
+    ptr->next=head;
+    return head;
+}
+struct node* delatfirst(struct node *head){
+    struct node *ptr=head;
+        struct node *p=head->next;
+   free(ptr);
+    return ptr->next;
+}
+   
+
+struct node* delatindex(struct node *head,int ind){
+    struct node *p=head;
+    struct node *q=head->next;
+    int i=0;
+    while(i!=ind){
+        p=p->next;
+        q=q->next;
+        i++;
+    }
+    p->next=q->next;
+    free(q);
+    return head;
+}
+struct node* delatend(struct node *head){
+    struct node *p=head;
+    struct node *q=head->next;
+   do{
+        p=p->next;
+        q=q->next;
+    } while(q->next!=head);
+    p->next=head;
+    free(q);
+    return head;
+}
+int main() {
+struct node *head=(struct node*)malloc(sizeof(struct node*));
+struct node *sec=(struct node*)malloc(sizeof(struct node*));
+struct node *thir=(struct node*)malloc(sizeof(struct node*));
+head->pev=thir;
+head->data=1;
+head->next=sec;
+sec->pev=head;
+sec->data=2;
+sec->next=thir;
+thir->pev=sec;
+thir->data=3;
+thir->next=head;
+print(head);
+printf("after update!\n");
+head=insertatfirst(head,0);
+head=insertatindex(head,11,1);
+head=insertatlast(head,12);
+//head=delatfirst(head);
+head=delatindex(head,1);
+head=delatend(head);
+print(head);
+    return 0;
+}
