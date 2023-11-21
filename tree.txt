@@ -27,6 +27,18 @@ void postorder(struct node*root){
     
     }
 }
+struct node *search(struct node * root,int key){
+    if(root==NULL){
+        return NULL;
+    }
+    if(key==root->data){
+        return root;
+    }else if(key<root->data){
+        return search(root->left,key);
+    }else{
+        return search(root->right,key);
+    }
+}
  
 int main() {
 struct node*p=(struct node *)malloc(sizeof(struct node*));
@@ -48,5 +60,9 @@ struct node*p4=(struct node *)malloc(sizeof(struct node*));
     postorder(p);
     printf("\n");
     inorder(p);
+    struct node * n=search(p,1);
+    if(n!=NULL){
+        printf("\nelement fount%d",n->data);
+    }else{printf("not fount");}
     return 0;
 }
