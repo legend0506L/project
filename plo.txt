@@ -1,0 +1,42 @@
+#include<stdio.h>
+#include<math.h>
+#include<stdlib.h>
+void accept_poly(int b[], int m)
+{
+int i;
+for(i=m-1; i>=0; i--)
+{
+printf("Enter coefficent of x[%d] term: ",i); scanf("%d",&b[i]);
+}
+}
+void disp_poly(int b[], int n)
+{
+int i;
+for(i=n-1; i>=0; i--)
+{
+if(b[i]>0)
+printf("+%dx^%d",b[i],i);
+else if(b[i]<0)
+printf("%dx^%d",b[i],i);
+}
+printf("\n");
+}
+int eval(int b[], int n, int x)
+{
+int i,ans=0;
+for(i=n-1;i>=0;i--)
+ans = ans + b[i] * pow(x,i);
+return ans;
+}
+void main()
+{
+int a[10],n,x;
+printf("Enter order of polynomial: ");
+scanf("%d",&n);
+accept_poly(a,n);
+printf("Entered polynomial: ");
+disp_poly(a,n);
+printf("Enter Value of x: ");
+scanf("%d",&x);
+printf("Evaluated Value: %d",eval(a,n,x));
+ }
