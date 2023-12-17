@@ -1,0 +1,43 @@
+//html file 
+<html>
+    <body>
+        <form action="php-1-2.php" method="POST">
+            enter a course name to get detail of students! 
+            <input type="text" name="io">
+            <input type="submit">
+        </form>
+    </body>
+</html>
+
+//php file 
+<?php 
+$io=$_POST['io'];
+$xml=simplexml_load_file("php1-2-xml.xml");
+$x=$xml->children();
+foreach($x as $xmll){
+if($xmll->cname==$io){
+echo "student name :".$xmll->sname."<br>";
+echo "course  name :".$xmll->cname."<br>";
+echo "percentage  :".$xmll->percentage."<br>"."<br>";
+}
+else {echo "not found!";}}
+?>
+
+//xml file
+<course>
+<sy>
+<sname>abc</sname>
+<cname>bba-ca</cname>
+<percentage>82</percentage>
+</sy>
+<sy>
+<sname>xyz</sname>
+<cname>bba</cname>
+<percentage>78</percentage>
+</sy>
+<sy>
+<sname>abcd</sname>
+<cname>bba-ca</cname>
+<percentage>85</percentage>
+</sy>
+</course>

@@ -1,0 +1,16 @@
+<?php
+class mycal{
+    public $_op,$_val;
+    function getvalue($val,$op){
+    $this->_op=$op;
+    $this->_val=$val;}
+    function add(){ echo "the add:".$this->_op+$this->_val;}
+    function mul(){ echo "the mul :".$this->_op*$this->_val;}
+    function sub(){ echo "the sub:". $this->_op-$this->_val;}}
+
+$r=new mycal;
+$r->getvalue(12,2);
+$r->add();
+$r->mul();
+$r->sub();
+?>
