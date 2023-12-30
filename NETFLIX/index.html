@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            color: white;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        .main {
+            background-image: url(img/bgimg.jpg);
+            height: 70vh;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: max(1200px, 100vw);
+            position: relative;
+        }
+
+        .box {
+            height: 70vh;
+            width: 100vw;
+            opacity: 0.44;
+            background-color: rgb(0, 0, 0);
+            position: absolute;
+            top: 0px;
+        }
+
+        nav {
+            height: 50px;
+            margin: auto;
+            max-width: 62vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .svg {
+            position: relative;
+            width: 100px;
+            z-index: 1;
+        }
+
+        .btn {
+            border: 1px solid white;
+            padding: 2px 12px;
+            border-radius: 2px;
+            background-color: black;
+        }
+
+        .btn-red {
+            margin-left: 6px;
+            background-color: red;
+            border: none;
+        }
+
+        .center {
+            padding: 0px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: calc(100% - 50px);
+            gap: 14px;
+            position: relative;
+        }
+
+        .center> :first-child {
+            text-align: center;
+            font-weight: bolder;
+            padding: 2px 2px 8px 1px;
+            font-size: 40px;
+        }
+
+        .center> :nth-child(2) {
+            text-align: center;
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        .center> :nth-child(3) {
+            text-align: center;
+            font-size: 17px;
+            padding-bottom: 6px;
+            font-weight: 400;
+        }
+
+        .red {
+            padding: 10px 22px;
+        }
+
+        .line {
+            height: 4px;
+            background-color: gray;
+
+        }
+
+        .input {
+            display: flex;
+        }
+
+        .ip {
+            padding: 6px 52px 6px 12px;
+            color: white;
+            border: 1px solid white;
+            background-color: #212020;
+        }
+
+        .first {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            width: 70vw;
+
+        }
+
+        .sec-img img {
+            position: relative;
+            z-index: 10;
+            width: 30vw;
+        }
+
+        .sec-img {
+            position: relative;
+        }
+
+        .sec-img video {
+            width: 25vw;
+            position: absolute;
+            top: 51px;
+            right: 0;
+        }
+
+        section>div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .first>div>span:nth-child(1) {
+            text-align: center;
+            font-size: 28px;
+            padding: 30px 3px 4px 2px;
+            font-weight: bolder;
+        }
+
+        .first>div>span:nth-child(2) {
+            font-size: 16px;
+            text-align: center;
+            font-weight: bolder;
+        }
+
+        .thir-img>.video {
+            width: 19vw;
+            position: absolute;
+            top: 24px;
+            right: 75px;
+        }
+
+        .faq {
+            background-color: black;
+            color: white;
+            padding: 34px;
+            text-align: center;
+        }
+
+        .faqbox {
+            display: flex;
+            background-color: gray;
+            padding: 15px 55px 15px 28px;
+            max-width: 55vw;
+            margin: 18px auto;
+        }
+
+        .faqlast {
+            margin: 12px 2px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .faqlast p {
+            margin: 12px;
+        }
+
+        .footer{
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            width: 60vw;
+            margin: auto;
+        } 
+
+        .items{
+            font-size: 10px;
+            padding: 24px;
+            gap: 16px;
+            display: flex;
+            flex-direction: column;
+        }
+        .ques{
+            padding-bottom: 50px;
+            margin: 50px auto;
+            max-width: 60vw;
+        }
+
+        @media screen and (max-width:1900px) {
+            nav {
+                max-width: 80vw;
+            }
+
+            .main {
+                height: 62vh;
+            }
+        }
+
+        @media screen and (max-width:960px) {
+            .first {
+                flex-direction: column;
+            }
+
+            .sec-img img {
+                width: 70vw;
+            }
+
+            .sec-img video {
+                width: 57vw;
+                position: absolute;
+                top: 34px;
+                right: 20px;
+            }
+
+            .secend {
+                flex-direction: column-reverse;
+            }
+
+            .thir-img>.video {
+                width: 42vw;
+                position: absolute;
+                top: 24px;
+                right: 8vh;
+            }
+
+            .faqbox {
+                padding: 11px 55px 6px 28px;
+            }
+
+        }
+
+        @media screen and ((min-width:1400px) (max-width:2165px)) {
+            .thir-img>.video {
+                width: 18vw;
+                position: absolute;
+                top: 29px;
+                right: 10vh;
+            }
+        }
+
+        @media screen and (max-width:500px) {
+            .input {
+                flex-direction: column;
+                gap: 6px;
+                align-items: center;
+            }
+
+            nav {
+                max-width: 90vw;
+            }
+
+            .center> :first-child {
+                font-size: 28px;
+            }
+
+            .center> :nth-child(2) {
+                font-size: 16px
+            }
+
+            .center> :nth-child(3) {
+                font-size: 18px
+            }
+
+            .red {
+                margin-top: 16px;
+            }
+              
+            .footer{
+            grid-template-columns: 1fr 1fr;}
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="box"></div>
+        <nav>
+            <span class="svg"><img src="img/svg.svg"></span>
+            <div>
+                <button class="btn ">English</button>
+                <button class="btn btn-red">sign In</button>
+            </div>
+        </nav>
+        <div class="center">
+            <span>Laughter. Tears. Thrills. Find it all on Netflix.</span>
+            <span>Endless entertainment starts at just ₹149. Cancel anytime.</span>
+            <span>Ready to watch? Enter your email to create or restart your membership</span>
+            <div class="input">
+                <input type="text" class="ip" placeholder="email address">
+                <button class="btn-red red">Get started</button>
+            </div>
+        </div>
+        <div class="line"></div>
+        <section class="first">
+            <div>
+                <span>Enjoy on your TV</span>
+                <span>Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</span>
+            </div>
+            <div class="sec-img">
+                <img src="img/sec.png">
+                <video autoplay muted loop
+                    src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v"></video>
+            </div>
+        </section>
+        <div class="line"></div>
+        <section class="first secend">
+
+            <div class="sec-img ">
+                <img src="img/thir.jpg">
+
+            </div>
+            <div>
+                <span>Download your shows to watch offline</span>
+                <span>Save your favourites easily and always have something to watch.</span>
+            </div>
+        </section>
+        <div class="line"></div>
+        <section class="first thir">
+            <div>
+                <span>Watch everywhere</span>
+                <span> Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</span>
+            </div>
+            <div class="sec-img thir-img">
+                <img src="img/four.png">
+                <video class="video" autoplay muted loop src="video/video-devices-in.m4v"></video>
+            </div>
+        </section>
+        <div class="line"></div>
+        <section class="first secend">
+            <div class="sec-img ">
+                <img src="img/five.png">
+
+            </div>
+            <div>
+                <span>Create profiles for kids</span>
+                <span>Send children on adventures with their favourite characters in a space made just for them—free
+                    with your membership</span>
+            </div>
+        </section>
+        <div class="line"></div>
+        <div class="faq">
+            <h3>Frequently Asked Questions</h3>
+            <div class="faqbox">
+                <span>what is netflix +</span>
+            </div>
+            <div class="faqbox">
+                <span>How much does Netflix cost?</span>
+            </div>
+            <div class="faqbox">
+                <span>Where can I watch?</span>
+            </div>
+            <div class="faqbox">
+                <span>How do I cancel?</span>
+            </div>
+            <div class="faqbox">
+                <span>What can I watch on Netflix?</span>
+            </div>
+            <div class="faqbox">
+                <span>Is Netflix good for kids?</span>
+            </div>
+            <div class="faqlast">
+                <p>Ready to watch? Enter your email to create or restart your membership.</p>
+                <div class="input">
+                    <input type="text" class="ip" placeholder="email address">
+                    <button class="btn-red red">Get started</button>
+                </div>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="ques">
+            <span>Questions? Call 000-800-919-1694</span>
+            <div class="footer">
+               <div class="items">
+                <span>FAQ</span>
+                <span>Account</span>
+                <span>ways to watch</span>
+                <span>privacy</span>
+               </div>
+
+               <div class="items">
+                <span>FAQ</span>
+                <span>Account</span>
+                <span>ways to watch</span>
+                <span>privacy</span>
+               </div>
+
+
+               <div class="items">
+                <span>FAQ</span>
+                <span>Account</span>
+                <span>ways to watch</span>
+                <span>privacy</span>
+               </div>
+
+
+               <div class="items">
+                <span>FAQ</span>
+                <span>Account</span>
+                <span>ways to watch</span>
+                <span>privacy</span>
+               </div>
+            </div>
+        </div>
+</body>
+
+</html>
