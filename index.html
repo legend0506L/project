@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ꢺŁłᎮ-ƬᎧᎧŁ</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon_package_v0.16/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon_package_v0.16//favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon_package_v0.16//favicon-16x16.png">
+  <link rel="manifest" href="favicon_package_v0.16//site.webmanifest">
+  <link rel="mask-icon" href="favicon_package_v0.16//safari-pinned-tab.svg" color="#5bbad5">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Kanit&family=Timmana&display=swap');
+
+
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      scroll-behavior: smooth;
+      background: linear-gradient(90deg, rgba(2, 0, 36, 1) -11%, rgba(107, 9, 176, 1) 36%, rgba(0, 212, 255, 1) 96%);
+      color: white;
+    }
+
+    nav {
+      flex-wrap: wrap;
+      height: 10vh;
+      background-color: black;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    ul li {
+      list-style: none;
+    }
+
+    nav ul li a {
+      font-weight: 100;
+      color: #0d6efd;
+      text-decoration: none;
+      font-size: 26px;
+      font-family: 'Kanit';
+
+    }
+
+    .nav-video {
+      margin-left: 34px;
+      width: 70px;
+    }
+
+    .nav-sec-video {
+      margin-left: 56px;
+      height: 60px;
+      width: 500px;
+
+    }
+
+    .nav-first {
+      gap: 18px;
+      display: flex;
+      align-items: center
+    }
+
+    .nav-title {
+      font-size: 32px;
+      color: red;
+    }
+
+    .nav-last ul {
+      flex-wrap: wrap;
+      padding-right: 36px;
+      gap: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .alert1 {
+      background-color: rgb(82 19 127);
+      color: rgb(0, 254, 199);
+    }
+
+    .main {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .main-img img {
+      width: 400px;
+    }
+
+    .display-1 {
+      font-size: 4rem;
+    }
+
+    .para-tag {
+      color: white;
+      width: 600px;
+      margin: 12px 0px;
+    }
+
+    .hr {
+      border-style: dotted none none none;
+      width: 8%;
+      border-width: 20px;
+      margin: auto;
+    }
+
+    .main1 {
+      justify-content: space-evenly;
+    }
+
+    img {
+      filter: drop-shadow(10px 13px 5px black);
+    }
+
+    .img1 {
+      filter: drop-shadow(-10px 4px 6px black);
+    }
+
+    .bt {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .items {
+      height: 8px;
+      width: 450px;
+      margin: 2px;
+      background-color: aqua;
+      position: absolute;
+    }
+
+    .items1 {
+      margin: 200px 2px 216px 4px;
+      width: 330px;
+      position: relative;
+      height: 10px;
+      rotate: 90deg;
+    }
+
+    .s1 {
+      top: -30px;
+      font-size: 51px;
+      rotate: 270deg;
+      position: relative;
+      right: 49px;
+    }
+
+    .s2 {
+      position: relative;
+      left: 260px;
+      bottom: 101px;
+      font-size: 54px;
+    }
+
+    .s3 {
+      position: relative;
+      left: 74px;
+      top: 42px;
+      font-size: 50px;
+    }
+
+    .s4 {
+      position: relative;
+      left: 266px;
+      top: 38px;
+      font-size: 50px;
+    }
+
+    .s1>a,
+    .s2>a,
+    .s3,
+    .s4 {
+      color: black;
+      font-family: 'Timmana';
+    }
+
+    @media screen and (max-width:1200px) {
+      .nav-sec-video {
+        width: 200px;
+      }
+    }
+
+    @media screen and (max-width:600px) {
+      nav {
+        height: 13vh;
+        display: block;
+      }
+
+      nav ul li a {
+        font-size: 18px;
+      }
+
+      .nav-last ul {
+        background: black;
+        margin: 6px 0px 0px 5px;
+      }
+
+      .main {
+        flex-direction: column;
+      }
+
+      .main-img img {
+        margin-top: 30px;
+        width: 320px;
+      }
+
+      .nav-sec-video {
+        margin-left: 2px;
+        height: 51px;
+      }
+
+      .para-tag {
+        margin-bottom: 32px;
+        width: 268px;
+      }
+
+      .display-1 {
+        font-size: 3.2rem;
+      }
+
+      .headline1 {
+        margin-left: 12px;
+        padding: 4px 16px;
+      }
+
+      .hr {
+        width: 30%;
+      }
+
+      .para-tag1 {
+        width: 80vw;
+        margin-top: 16px;
+      }
+
+      .items {
+        height: 9px;
+        width: 265px;
+      }
+
+      .items1 {
+        margin: 214px 2px 216px 4px;
+      }
+
+      .box {
+        height: 220px;
+      }
+
+      .s1 {
+        top: -25px;
+        font-size: 44px;
+        rotate: 270deg;
+        position: relative;
+        right: 62px;
+      }
+
+      .s2 {
+        position: absolute;
+        left: 164px;
+        bottom: 24px;
+        color: black;
+        font-size: 48px;
+      }
+
+      .s3 {
+        position: relative;
+        left: 15px;
+        top: 40px;
+        font-size: 46px;
+      }
+
+      .s4 {
+        position: relative;
+        left: 151px;
+        top: 38px;
+        font-size: 44px;
+      }
+
+      .text-center {
+        text-align: left !important;
+      }
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+
+
+    @media screen and ((max-width:1050px)and (min-width:601px)) {
+      .main-img img {
+        padding-left: 34px;
+      }
+
+      .para-tag {
+        width: 528px;
+      }
+
+      .display-1 {
+        font-size: 3rem;
+      }
+
+      .main1 {
+        gap: 40px;
+      }
+    }
+
+    .s11:hover,
+    .s22:hover {
+      transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+      font-size: 120%;
+      filter: drop-shadow(-6px -5px 4px rgb(2, 80, 80));
+      color: aqua;
+    }
+
+    .s3:hover,.s4:hover {
+      font-size: 220%;
+      transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+      filter: drop-shadow(-6px -5px 4px rgb(2, 80, 80));
+      color: aqua;
+    }
+
+    nav ul li a:hover {
+      font-size: 140%;
+      transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+      box-shadow: 6px 5px 2px rgb(2, 80, 71);
+    }
+
+    body::-webkit-scrollbar {
+      border-radius: 24px;
+      width: 8px;
+    }
+
+    body::-webkit-scrollbar-thumb {
+      background-image: linear-gradient(red, blue, green);
+      border-radius: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="nav-first"> <video autoplay loop muted class="nav-video">
+        <source src="video/itachi.mp4" id="source">
+      </video>
+      <span class="nav-title">𝖎𝖙𝖆𝖈𝖍𝖎</span>
+      <video class="nav-sec-video" src="video/obtio.mp4" width="700px" autoplay loop muted class="v2" id="vi2"></video>
+    </div>
+    <div class="nav-last">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#web-tech">Web-tech</a></li>
+        <li><a href="#r-prog">R-prog</a></li>
+        <li><a href="#php">PHP</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="alert alert-warning alert-dismissible fade show nav-alert alert1" role="alert">
+    <strong>Hi There!</strong> this webstide is on working on some update so any botton, link, are not working.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  <div class="main" id="home">
+    <div class="headline1">
+      <h1 class="display-1">
+        Welcome to <span class="text-primary">slip-tool</span> <br>
+        Develop anything.
+      </h1>
+      <p class="lead  text-md-start mb-6 mb-lg-6 para-tag">
+        Build a beautiful, modern web-base-code with flexible built from scratch and get free code .
+      </p>
+      <div class="text-center text-md-start">
+        <a href="#slip" class="btn btn-primary shadow lift me-1 btn-1">
+          View all pages <i class="fe fe-arrow-right d-none d-md-inline ms-3"></i>
+        </a>
+        <a href="re.html" class="btn btn-primary-soft lift orgin" style="color: white;">
+          orgin
+        </a>
+      </div>
+    </div>
+    <div class="main-img">
+      <img class="img1" src="img/illustration-1.png">
+    </div>
+  </div>
+  <br><br><br>
+  <hr class="hr"><br><br><br>
+  <div class="main main1">
+    <div class="main-img">
+      <img src="img/project.png">
+    </div>
+    <div class="headline1">
+      <p class="lead  text-md-start mb-6 mb-lg-6 para-tag1 para-tag">
+        Coding projects are simple applications built by junior developers or beginners. These apps usually have a
+        single functionality, like a to-do list app or a random number generator. These projects are easy to
+        conceptualize and build end-to-end as a single developer that’s at the beginning of their career.</p>
+      <p class="lead  text-md-start mb-6 mb-lg-6 para-tag1 para-tag">
+        Let’s now take a look at some beginner coding projects and their key features. The goal of these projects is to
+        write high-quality code and execute it cleanly, so don’t worry too much about adding bells and whistles
+      </p>
+      <div class="bt">
+        <a href="overview.html" class="btn btn-primary shadow lift me-1 btn-1">
+          View all pages <i class="fe fe-arrow-right d-none d-md-inline ms-3"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <br><br><br>
+  <hr class="hr"><br><br><br>
+  <div class="box">
+    <div class="items items1">
+      <div class="s1"><a href="r-prog.html" id="r-prog" class="r-prog s11">R-PROG</a></div>
+    </div>
+    <div class="items items2">
+      <div class="s2"><a href="php.html" id="php" class="php s22">PHP</a></div>
+    </div>
+    <div class="items items3">
+      <div class="s33"><a href="aphp.html" class="s3">Aphp</a></div>
+    </div>
+    <div class="items items4">
+      <div class="s44"><a href="aphp.html" id="web-tech" class="s4">web-tech</a></div>
+    </div>
+  </div>
+  <br><br><br>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
