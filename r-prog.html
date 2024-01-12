@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-        <link
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
         href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Dancing+Script:wght@400;700&family=Foldit:wght@500&family=Titillium+Web:wght@200&display=swap"
         rel="stylesheet">
     <style>
@@ -235,14 +237,56 @@
             text-decoration: line-through;
             box-shadow: 2px 2px 8px -1px red, -2px -2px 8px blue, 7px 1px 204px 73px rgb(25, 227, 2);
         }
-        .php{
+
+        .php {
             color: black;
             text-decoration: none;
         }
-        
+
         .font-r {
             font-family: 'Titillium Web';
-        } 
+        }
+
+        @media screen and (max-width:500px) {
+            .outline {
+                width: 114vw;
+                height: 114vh;
+            }
+
+            .inline {
+                width: 290px;
+                top: 40%;
+                right: 25px;
+                padding: 16px 20px;
+                border-radius: 8px;
+            }
+
+            @keyframes anmia {
+                1% {
+                    top: 50px;
+                }
+
+                5% {
+                    top: 58px;
+                }
+
+                15% {
+                    top: 46px;
+                }
+
+                20% {
+                    top: 54px;
+                }
+
+                60% {
+                    top: 40px;
+                }
+
+                100% {
+                    top: 20px;
+                }
+            }
+        }
     </style>
 </head>
 
