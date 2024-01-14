@@ -17,6 +17,7 @@
             margin: 0;
             padding: 0;
         }
+        .desktop{display: none;}
 
         .outline {
             width: 100vw;
@@ -327,18 +328,20 @@
         }
 
         @media screen and (max-width:400px) {
-             .b11:hover{   overflow: hidden;
-    transform: scale(1);
-    width: 320px;
-    height: 344px;
-    position: absolute;
-    top: 9px;}
+             .b11:hover{ overflow: hidden;
+                      transform: scale(1);
+                      width: 320px;
+                      height: 344px;
+                      position: absolute;
+                      top: 9px;}
+
+         .desktop{display: block;}
         }
     </style>
 </head>
 
 <body>
-    <div class="outline">
+    <div class="outline"><h1 class="desktop">plz turn on desktop mode !</h1>
         <div class="inline">
             <header class="header">
                 <h1 class="font-r">web-tech slip</h1>
