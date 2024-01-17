@@ -117,7 +117,6 @@
         }
 
         .first {
-            padding:58px 1px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -195,21 +194,22 @@
             margin: 12px;
         }
 
-        .footer{
-            display:grid;
+        .footer {
+            display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
             width: 60vw;
             margin: auto;
-        } 
+        }
 
-        .items{
+        .items {
             font-size: 10px;
             padding: 24px;
             gap: 16px;
             display: flex;
             flex-direction: column;
         }
-        .ques{
+
+        .ques {
             padding-bottom: 50px;
             margin: 50px auto;
             max-width: 60vw;
@@ -221,7 +221,7 @@
             }
 
             .main {
-                height: 62vh;
+                height: 64vh;
             }
         }
 
@@ -258,7 +258,7 @@
 
         }
 
-        @media screen and ((min-width:1400px) (max-width:2165px)) {
+        @media screen and ((min-width:1400px) and (max-width:2165px)) {
             .thir-img>.video {
                 width: 18vw;
                 position: absolute;
@@ -293,12 +293,30 @@
             .red {
                 margin-top: 16px;
             }
-              
-            .footer{
-            grid-template-columns: 1fr 1fr;}
+
+            .footer {
+                grid-template-columns: 1fr 1fr;
+            }
         }
-         @media screen and (min-height:1065px)  {
-           .main{ background-size: cover;}
+
+        @media screen and (min-height:1065px) {
+            .main {
+                background-size: cover;
+            }
+        }
+
+        @media screen and (width:1366px) and (height: 768px) {
+            .main {
+                height: 80vh;
+            }
+
+            .center {
+                height: calc(92% - 0px);
+            }
+
+            .box {
+                height: 80vh;
+            }
         }
     </style>
 </head>
@@ -319,7 +337,7 @@
             <span>Ready to watch? Enter your email to create or restart your membership</span>
             <div class="input">
                 <input type="text" class="ip" placeholder="email address">
-                <button class="btn-red red">Get started</button>
+                <button class="btn-red red"><a href="movies.html">Get started</a></button>
             </div>
         </div>
         <div class="line"></div>
@@ -390,47 +408,41 @@
             <div class="faqbox">
                 <span>Is Netflix good for kids?</span>
             </div>
-            <div class="faqlast">
-                <p>Ready to watch? Enter your email to create or restart your membership.</p>
-                <div class="input">
-                    <input type="text" class="ip" placeholder="email address">
-                    <button class="btn-red red">Get started</button>
-                </div>
-            </div>
+          
         </div>
         <div class="line"></div>
         <div class="ques">
             <span>Questions? Call 000-800-919-1694</span>
             <div class="footer">
-               <div class="items">
-                <span>FAQ</span>
-                <span>Account</span>
-                <span>ways to watch</span>
-                <span>privacy</span>
-               </div>
+                <div class="items">
+                    <span>FAQ</span>
+                    <span>Account</span>
+                    <span>ways to watch</span>
+                    <span>privacy</span>
+                </div>
 
-               <div class="items">
-                <span>FAQ</span>
-                <span>Account</span>
-                <span>ways to watch</span>
-                <span>privacy</span>
-               </div>
-
-
-               <div class="items">
-                <span>FAQ</span>
-                <span>Account</span>
-                <span>ways to watch</span>
-                <span>privacy</span>
-               </div>
+                <div class="items">
+                    <span>FAQ</span>
+                    <span>Account</span>
+                    <span>ways to watch</span>
+                    <span>privacy</span>
+                </div>
 
 
-               <div class="items">
-                <span>FAQ</span>
-                <span>Account</span>
-                <span>ways to watch</span>
-                <span>privacy</span>
-               </div>
+                <div class="items">
+                    <span>FAQ</span>
+                    <span>Account</span>
+                    <span>ways to watch</span>
+                    <span>privacy</span>
+                </div>
+
+
+                <div class="items">
+                    <span>FAQ</span>
+                    <span>Account</span>
+                    <span>ways to watch</span>
+                    <span>privacy</span>
+                </div>
             </div>
         </div>
 </body>
